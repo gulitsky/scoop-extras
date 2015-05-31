@@ -1,0 +1,18 @@
+{
+	"version": "2.1.5",
+	"url": [
+		"https://github.com/technomancy/leiningen/archive/2.5.1.zip",
+		"https://github.com/technomancy/leiningen/releases/download/2.5.1/leiningen-2.5.1-standalone.zip"
+	],
+	"bin": [
+		"bin\\lein.bat"
+	],
+	"env_set": {
+		"LEIN_JAR": "$dir\\jars\\leiningen-2.5.1-standalone.jar"
+	},
+	"hash": [
+		"sha1:4f6e2e189be0a163f400c3a8060896285fe731f7",
+		"sha1:1c526e6573713b0635a1f2d52502ffa04ae45383"
+	],
+
+}
