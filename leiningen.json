@@ -1,17 +1,16 @@
-{
-	"version": "2.1.5",
+﻿{
+	"version": "2.5.1",
+	"license": "Eclipse Public License",
 	"url": [
-		"https://github.com/technomancy/leiningen/archive/2.5.1.zip",
-		"https://github.com/technomancy/leiningen/releases/download/2.5.1/leiningen-2.5.1-standalone.zip"
+		"https://github.com/technomancy/leiningen/archive/2.5.1.zip"
 	],
-	"bin": [
-		"bin\\lein.bat"
-	],
-	"env_set": {
-		"LEIN_JAR": "$dir\\jars\\leiningen-2.5.1-standalone.jar"
-	},
+	"homepage": "http://leiningen.org",
 	"hash": [
-		"sha1:4f6e2e189be0a163f400c3a8060896285fe731f7",
-		"sha1:1c526e6573713b0635a1f2d52502ffa04ae45383"
-	]
+		"sha1:ce40e979130adf8b80faf39477e146899b2263a5"
+	],
+	"bin": "leiningen-2.5.1\\bin\\lein.bat",
+	"env_set": {
+		"LEIN_JAR": "$dir\\leiningen-2.5.1\\jars\\leiningen-2.5.1-standalone.jar"
+	},
+	"post_install": "new-item -force -itemtype directory -path \"$dir\\leiningen-2.5.1\\jars\" | out-null; (new-object system.net.webClient).downloadFile('https://github.com/technomancy/leiningen/releases/download/2.5.1/leiningen-2.5.1-standalone.zip', \"$dir\\leiningen-2.5.1\\jars\\leiningen-2.5.1-standalone.jar\"); remove-item \"$dir\\leiningen-2.5.1\\src\" -force -recurse"
 }
